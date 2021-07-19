@@ -1,0 +1,140 @@
+.content {
+  width: 56vw;
+  height: 44vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  @media (max-width: 767px) {
+    display: none;
+  }
+  .video {
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+  .user {
+    width: 28vw;
+    float: left;
+    padding: 13vw 0 0 7.8vw;
+    .avatar {
+      width: 7.8vw;
+    }
+    p {
+      padding-top: 15px;
+      margin: 0;
+      font-family: PoppinsSemiBold;
+      font-size: 1.87vw;
+      color: #fff;
+    }
+    .storeimg {
+      width: 18.75vw;
+      margin-top: 15px;
+    }
+  }
+}
+.mobile {
+  @media (min-width: 768px) {
+    display: none;
+  }
+  .video {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+  .userinfo {
+    padding: 10px;
+    .avatar {
+      width: 40px;
+    }
+    .username {
+      padding-left: 12px;
+      font-family: PoppinsSemiBold;
+      font-size: 16px;
+      color: #fff;
+    }
+    a {
+      float: right;
+      font-family: PoppinsSemiBold;
+      font-size: 14px;
+      color: #fff;
+      padding: 7px 24px;
+      background: linear-gradient(
+        67.75deg,
+        #ff8c3d -12.47%,
+        #ff616e 62.18%,
+        #ba14ff 173.67%
+      );
+      border-radius: 26px;
+    }
+  }
+}
+.video {
+  width: 28vw;
+  float: left;
+  height: 44vw;
+  @media (max-width: 767px) {
+    float: none;
+    width: 100vw;
+  }
+  video {
+    width: 28vw;
+    height: 44vw;
+    @media (max-width: 767px) {
+      height: 178vw;
+      width: 100vw;
+    }
+  }
+  .bottommark {
+    padding: 1.3vw 2.7vw;
+    position: relative;
+    top: -7.8vw;
+    @media (max-width: 767px) {
+      top: -112px;
+    }
+    .avatar {
+      width: 3.4vw;
+      @media (max-width: 767px) {
+        width: 42px;
+      }
+    }
+    .heart {
+      float: right;
+      width: 4.2vw;
+      @media (max-width: 767px) {
+        width: 54px;
+      }
+    }
+    .userinfo {
+      display: inline-block;
+      padding-left: 10px;
+      position: relative;
+      top: 1.01vw;
+      @media (max-width: 767px) {
+        top: 10px;
+        position: relative;
+        top: 10px;
+      }
+      h4 {
+        font-family: PoppinsMedium;
+        font-size: 1vw;
+        color: #fff;
+        margin: 0;
+        @media (max-width: 767px) {
+          font-size: 16px;
+        }
+      }
+      p {
+        font-family: PoppinsMedium;
+        font-size: 0.9vw;
+        color: #fff;
+        padding-top: 4px;
+        margin: 0;
+        @media (max-width: 767px) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

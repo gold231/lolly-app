@@ -1,0 +1,14 @@
+/* Global styles to this file, You can also import other style files */
+
+/* === Plugin styles === */
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+@import "~bootstrap/scss/bootstrap";
+
+@import "./assets/styles/fonts";
+
+body {
+  background: rgba(20, 20, 20, 0.64);
+}
