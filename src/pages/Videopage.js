@@ -8,7 +8,7 @@ function Videopage() {
     <div className="page">
       <div className="content">
         <div className="video">
-          <a href="https://dms.licdn.com/playlist/C4D05AQGgNu1BmGvRwA/mp4-720p-30fp-crf28/0/1625659345852?e=1626645600&v=beta&t=1bDPMyUabNwXIQCX6uZ5FboiY8tRQI-9NZMEVoZvj1s">
+          <a href="https://assets.mixkit.co/videos/preview/mixkit-girl-in-neon-sign-1232-large.mp4">
             <video
               id="vid"
               width="320"
@@ -17,7 +17,7 @@ function Videopage() {
               loop="loop"
             >
               <source
-                src="https://dms.licdn.com/playlist/C4D05AQGgNu1BmGvRwA/mp4-720p-30fp-crf28/0/1625659345852?e=1626645600&v=beta&t=1bDPMyUabNwXIQCX6uZ5FboiY8tRQI-9NZMEVoZvj1s"
+                src="https://assets.mixkit.co/videos/preview/mixkit-girl-in-neon-sign-1232-large.mp4"
                 type="video/mp4"
               />
             </video>
@@ -49,7 +49,7 @@ function Videopage() {
           </a>
         </div>
         <div className="video">
-          <a href="https://dms.licdn.com/playlist/C4D05AQGgNu1BmGvRwA/mp4-720p-30fp-crf28/0/1625659345852?e=1626645600&v=beta&t=1bDPMyUabNwXIQCX6uZ5FboiY8tRQI-9NZMEVoZvj1s">
+          <a href="https://assets.mixkit.co/videos/preview/mixkit-girl-in-neon-sign-1232-large.mp4">
             <video
               id="vid"
               width="320"
@@ -58,7 +58,7 @@ function Videopage() {
               loop="loop"
             >
               <source
-                src="https://dms.licdn.com/playlist/C4D05AQGgNu1BmGvRwA/mp4-720p-30fp-crf28/0/1625659345852?e=1626645600&v=beta&t=1bDPMyUabNwXIQCX6uZ5FboiY8tRQI-9NZMEVoZvj1s"
+                src="https://assets.mixkit.co/videos/preview/mixkit-girl-in-neon-sign-1232-large.mp4"
                 type="video/mp4"
               />
             </video>
