@@ -53,7 +53,7 @@ function Videopage() {
         setVideoURL(
           `https://videodelivery.net/${res.data.data.cloudflareId}/downloads/default.mp4`
         )
-        let birthYear = new Date(res.data.data.user.dateOfBirth).getFullYear()
+        let birthYear = new Date(res.data.data.user.dateOfBirth * 1000).getFullYear()
         let nowYear = new Date().getFullYear()
         setAge(nowYear - birthYear)
       })
@@ -68,18 +68,18 @@ function Videopage() {
         <>
           <div className="content">
             <div className="video">
-              <a href={videoURL}>
+             
                 <video
                   id="vid"
                   width="320"
                   height="240"
                   autoPlay="autoPlay"
                   loop="loop"
-                  key={videoURL}
+                  key={videoURL}               
                 >
                   <source src={videoURL} type="video/mp4" />
                 </video>
-              </a>
+             
               <div className="bottommark">
                 <img className="avatar" src={data.profilePicture} alt="avatar" />
                 <div className="userinfo">
@@ -109,7 +109,7 @@ function Videopage() {
               </a>
             </div>
             <div className="video">
-              <a href={videoURL}>
+             
                 <video
                   id="vid"
                   width="320"
@@ -120,7 +120,7 @@ function Videopage() {
                 >
                   <source src={videoURL} type="video/mp4" />
                 </video>
-              </a>
+        
               <div className="bottommark">
                 <img className="avatar" src={data.profilePicture} alt="avatar" />
                 <div className="userinfo">

@@ -78,34 +78,38 @@
   height: 43vw;
   @media (max-width: 767px) {
     float: none;
-    width: 100vw;
+    width: auto;
+    height: calc(100vh - 65px);
+    text-align: center;
   }
   video {
     width: 28vw;
     height: 43vw;
     @media (max-width: 767px) {
-      height: 178vw;
-      width: 100vw;
+      height: calc(100vh - 65px);
+      width: auto;
+      margin: auto;
     }
   }
   .bottommark {
-    padding: 1.3vw 2vw;
+    padding: 1.3vw 3vw;
     position: relative;
     top: -7.8vw;
     @media (max-width: 767px) {
       top: -112px;
+      padding: 1.3vw 3vw;
     }
     .avatar {
       width: 3.4vw;
       border-radius: 50%;
       @media (max-width: 767px) {
-        width: 42px;
+        width: 37px;
       }
     }
     .heart {
       width: 4.2vw;
       @media (max-width: 767px) {
-        width: 54px;
+        width: 44px;
       }
     }
     .userinfo {
@@ -115,9 +119,8 @@
       top: 1.01vw;
       width: 65%;
       @media (max-width: 767px) {
-        top: 10px;
+        top: 15px;
         position: relative;
-        top: 10px;
       }
       h4 {
         font-family: PoppinsMedium;
@@ -125,7 +128,7 @@
         color: #fff;
         margin: 0;
         @media (max-width: 767px) {
-          font-size: 16px;
+          font-size: 13px;
         }
       }
       p {
@@ -135,7 +138,7 @@
         padding-top: 4px;
         margin: 0;
         @media (max-width: 767px) {
-          font-size: 12px;
+          font-size: 11px;
         }
       }
     }
