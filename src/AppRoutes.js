@@ -8,8 +8,8 @@ const Videopage = lazy(() => import("./pages/Videopage"))
 function AppRoutes(props) {
   return (
     <Suspense fallback={<Spinner />}>
-      <Switch>
-        <Route exact path="/" component={Videopage} />
+      <Switch>       
+        <Route exact path="/:id" component={Videopage} />        
         <Route component={Error404} />
       </Switch>
     </Suspense>

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 
 function Error404() {
   return (
@@ -16,14 +15,7 @@ function Error404() {
                   The page you’re looking for was not found.
                 </h3>
               </div>
-            </div>
-            <div className="row mt-5">
-              <div className="col-12 text-center mt-xl-2">
-                <Link className="btn btn-lg btn-rounded btn-secondary" to="/">
-                  SHOW ME SOME LIGHTS
-                </Link>
-              </div>
-            </div>
+            </div>            
           </div>
         </div>
       </div>
