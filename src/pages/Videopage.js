@@ -62,6 +62,16 @@ function Videopage() {
         setFlag(2)
       })
   }, [id])
+
+  const videoAct = (event) => {
+    if (!event.target.paused) {
+      event.target.pause()
+    } else {
+      event.target.play()
+    }
+    
+  }
+
   return (
     <div className="page">
       {flag === 1 && (
@@ -75,7 +85,8 @@ function Videopage() {
                   height="240"
                   autoPlay="autoPlay"
                   loop="loop"
-                  key={videoURL}               
+                  key={videoURL}
+                  onClick={(e) => videoAct(e)}      
                 >
                   <source src={videoURL} type="video/mp4" />
                 </video>
@@ -117,6 +128,7 @@ function Videopage() {
                   autoPlay="autoPlay"
                   loop="loop"
                   key={videoURL}
+                  onClick={(e) => videoAct(e)}
                 >
                   <source src={videoURL} type="video/mp4" />
                 </video>
