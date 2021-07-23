@@ -20,7 +20,7 @@ const detail = {
 function Videopage() {
   const [data, setData] = useState(detail)
   const [videoURL, setVideoURL] = useState("")
-  const [age, setAge] = useState(19)
+  const [age, setAge] = useState("")
 
   useEffect(() => {
     let headers = {
