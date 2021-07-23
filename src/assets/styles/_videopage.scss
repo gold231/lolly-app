@@ -20,6 +20,7 @@
     padding: 13vw 0 0 7.8vw;
     .avatar {
       width: 7.8vw;
+      border-radius: 50%;
     }
     p {
       padding-top: 15px;
@@ -47,6 +48,7 @@
     padding: 10px;
     .avatar {
       width: 40px;
+      border-radius: 50%;
     }
     .username {
       padding-left: 12px;
@@ -87,7 +89,7 @@
     }
   }
   .bottommark {
-    padding: 1.3vw 2.7vw;
+    padding: 1.3vw 2vw;
     position: relative;
     top: -7.8vw;
     @media (max-width: 767px) {
@@ -95,12 +97,12 @@
     }
     .avatar {
       width: 3.4vw;
+      border-radius: 50%;
       @media (max-width: 767px) {
         width: 42px;
       }
     }
     .heart {
-      float: right;
       width: 4.2vw;
       @media (max-width: 767px) {
         width: 54px;
@@ -111,6 +113,7 @@
       padding-left: 10px;
       position: relative;
       top: 1.01vw;
+      width: 65%;
       @media (max-width: 767px) {
         top: 10px;
         position: relative;
