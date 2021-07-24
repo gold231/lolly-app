@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { useParams } from "react-router-dom";
 
 import Appstore from "../assets/img/appstore.png"
 import Heart from "../assets/img/heart.png"
+import Play from "../assets/img/play.png"
 import "../assets/styles/_videopage.scss"
 
 import axios from "axios"
@@ -25,6 +26,11 @@ function Videopage() {
   const [age, setAge] = useState("")
 
   const [flag, setFlag] = useState(0)
+  const [playFlag, setPlayFlag] = useState(false);
+  const [playFlag2, setPlayFlag2] = useState(false);
+
+  const videoRef = useRef(null);
+  const videoRef2 = useRef(null);
 
   useEffect(() => {
     let headers = {
@@ -64,12 +70,33 @@ function Videopage() {
   }, [id])
 
   const videoAct = (event) => {
-    if (!event.target.paused) {
-      event.target.pause()
+    //desktop
+    let videoElement = videoRef.current;
+    if (!videoElement.paused) {
+      videoElement.pause()
+      setPlayFlag(true)
     } else {
-      event.target.play()
+      videoElement.play()
+      setPlayFlag(false)
+    } 
+
+    //mobile
+    let videoElement2 = videoRef2.current;
+    if (!videoElement2.paused) {
+      videoElement2.pause()
+      setPlayFlag2(true)
+    } else {
+      videoElement2.play()
+      setPlayFlag2(false)
+    }    
+  }
+
+  const handleVideoClick = e => {
+    if (!e.target.paused) {
+      e.target.pause()
+      setPlayFlag(true)      
+      setPlayFlag2(true)
     }
-    
   }
 
   return (
@@ -77,20 +104,23 @@ function Videopage() {
       {flag === 1 && (
         <>
           <div className="content">
-            <div className="video">
-             
-                <video
-                  id="vid"
-                  width="320"
-                  height="240"
-                  autoPlay="autoPlay"
-                  loop="loop"
-                  key={videoURL}
-                  onClick={(e) => videoAct(e)}      
-                >
-                  <source src={videoURL} type="video/mp4" />
-                </video>
-             
+
+            <div className="video">             
+              <video
+                id="vid"
+                width="320"
+                height="240"
+                autoPlay="autoPlay"
+                loop="loop"
+                key={videoURL}   
+                ref={videoRef}
+                onClick={handleVideoClick}
+              >
+                <source src={videoURL} type="video/mp4" />
+              </video>
+              {playFlag && <div className="play" onClick={(e) => videoAct(e)}>
+                <img src={Play} alt="play" width="50" />
+              </div>}
               <div className="bottommark">
                 <img className="avatar" src={data.profilePicture} alt="avatar" />
                 <div className="userinfo">
@@ -102,7 +132,6 @@ function Videopage() {
                 <img className="heart" src={Heart} alt="heart" />
               </div>
             </div>
-
             <div className="user">
               <img className="avatar" src={data.profilePicture} alt="avatar" />
               <p>{data.firstName} is on Lolly</p>
@@ -111,6 +140,7 @@ function Videopage() {
               </a>
             </div>
           </div>
+
           <div className="mobile">
             <div className="userinfo">
               <img className="avatar" src={data.profilePicture} alt="avatar" />
@@ -119,20 +149,22 @@ function Videopage() {
                 Open app
               </a>
             </div>
-            <div className="video">
-             
-                <video
-                  id="vid"
-                  width="320"
-                  height="240"
-                  autoPlay="autoPlay"
-                  loop="loop"
-                  key={videoURL}
-                  onClick={(e) => videoAct(e)}
-                >
-                  <source src={videoURL} type="video/mp4" />
-                </video>
-        
+            <div className="video">             
+              <video
+                id="vid"
+                width="320"
+                height="240"
+                autoPlay="autoPlay"
+                loop="loop"
+                key={videoURL} 
+                ref={videoRef2}
+                onClick={handleVideoClick}
+              >
+                <source src={videoURL} type="video/mp4" />
+              </video>   
+              {playFlag2 && <div className="play" onClick={(e) => videoAct(e)}>
+                <img src={Play} alt="play" width="50" />
+              </div>}   
               <div className="bottommark">
                 <img className="avatar" src={data.profilePicture} alt="avatar" />
                 <div className="userinfo">

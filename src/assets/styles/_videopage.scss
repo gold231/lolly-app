@@ -76,6 +76,7 @@
   width: 28vw;
   float: left;
   height: 43vw;
+  position: relative;
   @media (max-width: 767px) {
     float: none;
     width: auto;
@@ -91,13 +92,22 @@
       margin: auto;
     }
   }
+  .play {
+    position: relative;
+    top: -24vw;
+    left: 12vw;
+    @media (max-width: 767px) {
+      top: -50vh;      
+      left: auto;
+    }
+  }
   .bottommark {
     padding: 1.3vw 3vw;
-    position: relative;
-    top: -7.8vw;
-    @media (max-width: 767px) {
-      top: -112px;
+    position: absolute;
+    top: calc(43vw - 105px);
+    @media (max-width: 767px) {      
       padding: 1.3vw 3vw;
+      top: calc(100vh - 165px);
     }
     .avatar {
       width: 3.4vw;
