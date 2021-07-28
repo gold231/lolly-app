@@ -10,5 +10,10 @@
 @import "./assets/styles/fonts";
 
 body {
-  background: rgba(20, 20, 20, 0.64);
+  // background: rgba(20, 20, 20, 0.64);
+  // background-image: url("/src/assets/img/background-image.png");
+  background-repeat: no-repeat;
+  background-image: url(./assets/img/background-image.png);
+  background-size: cover;
+  background-attachment: fixed;
 }

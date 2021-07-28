@@ -17,21 +17,35 @@
   .user {
     width: 28vw;
     float: left;
-    padding: 13vw 0 0 7.8vw;
+    // padding: 13vw 0 0 7.8vw;
+    padding: 13vw 0 0 4.8vw;
     .avatar {
-      width: 7.8vw;
+      // width: 7.8vw;
+      width: 6.8vw;
       border-radius: 50%;
+      border: 3px solid #ffffff;
     }
     p {
-      padding-top: 15px;
+      // padding-top: 15px;
+      // margin: 0;
+      // font-family: PoppinsSemiBold;
+      // font-size: 1.87vw;
+      // color: #fff;
+      padding-top: 20px;
       margin: 0;
       font-family: PoppinsSemiBold;
-      font-size: 1.87vw;
-      color: #fff;
+      font-size: 24px;
+      line-height: 20px;
+      font-weight: 600;
+      font-style: normal;
+      color: #ffffff;
     }
     .storeimg {
-      width: 18.75vw;
-      margin-top: 15px;
+      // width: 18.75vw;
+      // margin-top: 15px;
+      margin-top: 20px;
+      height: 71px;
+      width: 240px;
     }
   }
 }
@@ -97,7 +111,7 @@
     top: -24vw;
     left: 12vw;
     @media (max-width: 767px) {
-      top: -50vh;      
+      top: -50vh;
       left: auto;
     }
   }
@@ -105,7 +119,7 @@
     padding: 1.3vw 3vw;
     position: absolute;
     top: calc(43vw - 105px);
-    @media (max-width: 767px) {      
+    @media (max-width: 767px) {
       padding: 1.3vw 3vw;
       top: calc(100vh - 165px);
     }
