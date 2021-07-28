@@ -129,7 +129,43 @@ function Videopage() {
                   <img src={Play} alt="play" width="50" />
                 </div>
               )}
-              <div className="bottommark">
+              <div className={`video-footer`}>
+                <div className="video-footer-left">
+                  <img src={data.profilePicture} alt="avatar" />
+                  <div className="userinfo">
+                    <h4>
+                      {data.firstName} | {age} | {data.location}
+                    </h4>
+                    <p>{data.bio}</p>
+                  </div>
+                </div>
+                <div className="video-footer-right">
+                  <img className="heart" src={Heart} alt="heart" />
+                </div>
+              </div>
+
+              {/* <div class="video-footer">
+                <div class="row">
+                  <div class="col-md-2" style={{ border: "1px solid white" }}>
+                    <img
+                      src={data.profilePicture}
+                      alt="avatar"
+                      style={{ width: "50px" }}
+                    />
+                  </div>
+                  <div class="col-md-8" style={{ border: "1px solid white" }}>
+                    <h4>
+                      {data.firstName} | {age} | {data.location}
+                    </h4>
+                    <p>{data.bio}</p>
+                  </div>
+                  <div class="col-md-2" style={{ border: "1px solid white" }}>
+                    {" "}
+                    <img src={Heart} alt="avatar" style={{ width: "50px" }} />
+                  </div>
+                </div>
+              </div> */}
+              {/* <div className="bottommark">
                 <img
                   className="avatar"
                   src={data.profilePicture}
@@ -142,8 +178,9 @@ function Videopage() {
                   <p>{data.bio}</p>
                 </div>
                 <img className="heart" src={Heart} alt="heart" />
-              </div>
+              </div> */}
             </div>
+
             <div className="user">
               <img className="avatar" src={data.profilePicture} alt="avatar" />
               <p>{data.firstName} is on Lolly</p>
@@ -181,7 +218,21 @@ function Videopage() {
                   <img src={Play} alt="play" width="50" />
                 </div>
               )}
-              <div className="bottommark">
+              <div className="video-footer">
+                <div className="video-footer-left">
+                  <img src={data.profilePicture} alt="avatar" />
+                  <div className="userinfo">
+                    <h4>
+                      {data.firstName} | {age} | {data.location}
+                    </h4>
+                    <p>{data.bio}</p>
+                  </div>
+                </div>
+                <div className="video-footer-right">
+                  <img className="heart" src={Heart} alt="heart" />
+                </div>
+              </div>
+              {/* <div className="bottommark">
                 <img
                   className="avatar"
                   src={data.profilePicture}
@@ -194,7 +245,7 @@ function Videopage() {
                   <p>{data.bio}</p>
                 </div>
                 <img className="heart" src={Heart} alt="heart" />
-              </div>
+              </div> */}
             </div>
           </div>
         </>
