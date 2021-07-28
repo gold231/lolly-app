@@ -112,9 +112,10 @@ function Videopage() {
             <div className="video">
               <video
                 id="vid"
-                width="320"
-                // height="240"
-                height={data.videoHeight}
+                // width="320"
+                width={data.videoWidth}
+                height="240"
+                // height={data.videoHeight}
                 autoPlay="autoPlay"
                 loop="loop"
                 key={videoURL}
@@ -164,8 +165,9 @@ function Videopage() {
               <video
                 id="vid"
                 width="320"
-                // height="240"
-                height={data.videoHeight}
+                width={data.videoWidth}
+                height="240"
+                // height={data.videoHeight}
                 autoPlay="autoPlay"
                 loop="loop"
                 key={videoURL}
