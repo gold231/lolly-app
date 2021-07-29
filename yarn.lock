@@ -2255,6 +2255,11 @@
     "require-from-string" "^2.0.2"
     "uri-js" "^4.2.2"
 
+"all@^0.0.0":
+  "integrity" "sha1-+yqnXUdZ1A457LsRj6vwzBH/VU8="
+  "resolved" "https://registry.npmjs.org/all/-/all-0.0.0.tgz"
+  "version" "0.0.0"
+
 "alphanum-sort@^1.0.0":
   "integrity" "sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM="
   "resolved" "https://registry.npmjs.org/alphanum-sort/-/alphanum-sort-1.0.2.tgz"
