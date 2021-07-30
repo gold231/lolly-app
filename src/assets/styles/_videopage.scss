@@ -1,3 +1,18 @@
+.page {
+  width: 100%;
+  height: 100vh;
+  .bg-image {
+    position: absolute;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    width: 100%;
+    height: 100vh;
+  }
+}
+
 .content {
   width: 56vw;
   height: 100vh;
@@ -6,6 +21,7 @@
   top: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+
   @media (max-width: 767px) {
     display: none;
   }
@@ -100,7 +116,6 @@
     }
   }
   .play {
-
     //New-Css
     position: fixed;
     top: 45%;

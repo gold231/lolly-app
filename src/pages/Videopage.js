@@ -79,21 +79,12 @@ function Videopage() {
       });
   }, [id]);
 
-  //This will set the image dynamically.
   useEffect(() => {
-    document.body.style.backgroundImage = `url(${backgrounImage})`;
-    document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundSize = "cover";
-    document.body.style.backgroundAttachment = "fixed";    
-
-  }, [backgrounImage]);
-
-  useEffect(() => {
-    if(flag === 1) {
+    if (flag === 1) {
       setTimeout(() => {
-        document.getElementById('vid').play();
-      }, 500);      
-    }    
+        document.getElementById("vid").play();
+      }, 500);
+    }
   }, [flag]);
 
   const videoAct = (event) => {
@@ -124,7 +115,7 @@ function Videopage() {
       e.target.pause();
       setPlayFlag(true);
       setPlayFlag2(true);
-    } 
+    }
     // else {
     //   // console.log("Playing");
     //   e.target.play();
@@ -134,120 +125,134 @@ function Videopage() {
   };
 
   return (
-    <div className="page">
-      {flag === 1 && (
-        <>
-          <div className="content">
-            <div className="video">
-              <video
-                id="vid"
-                width={data.videoWidth}
-                height="240"
-                autoPlay="autoPlay"
-                muted="muted"
-                loop="loop"
-                key={videoURL}
-                ref={videoRef}
-                onClick={handleVideoClick}
-              >
-                <source src={videoURL} type="video/mp4" />
-              </video>
-              {playFlag && (
-                <div className="play" onClick={(e) => videoAct(e)}>
-                  <img src={Play} alt="play" width="50" />
-                </div>
-              )}
-              <div className={`video-footer`}>
-                <div className="video-footer-left">
-                  <img src={data.profilePicture} alt="avatar" />
-                  <div className="userinfo">
-                    <h4>
-                      {data.firstName} | {age}{" "}
-                      {`${data.location !== "" ? `| ${data.location}` : ""}`}
-                    </h4>
-                    {data.caption !== "" ? <p>{data.caption}</p> : ""}
+    <>
+      <div className="page">
+        <img className="bg-image" src={backgrounImage} alt="Background image" />
+        {flag === 1 && (
+          <>
+            <div className="content">
+              <div className="video">
+                <video
+                  id="vid"
+                  width={data.videoWidth}
+                  height="240"
+                  autoPlay="autoPlay"
+                  muted="muted"
+                  loop="loop"
+                  key={videoURL}
+                  ref={videoRef}
+                  onClick={handleVideoClick}
+                >
+                  <source src={videoURL} type="video/mp4" />
+                </video>
+                {playFlag && (
+                  <div className="play" onClick={(e) => videoAct(e)}>
+                    <img src={Play} alt="play" width="50" />
+                  </div>
+                )}
+                <div className={`video-footer`}>
+                  <div className="video-footer-left">
+                    <img src={data.profilePicture} alt="avatar" />
+                    <div className="userinfo">
+                      <h4>
+                        {data.firstName} | {age}{" "}
+                        {`${data.location !== "" ? `| ${data.location}` : ""}`}
+                      </h4>
+                      {data.caption !== "" ? <p>{data.caption}</p> : ""}
+                    </div>
+                  </div>
+                  <div className="video-footer-right">
+                    <img className="heart" src={Heart} alt="heart" />
                   </div>
                 </div>
-                <div className="video-footer-right">
-                  <img className="heart" src={Heart} alt="heart" />
-                </div>
+              </div>
+
+              <div className="user">
+                <img
+                  className="avatar"
+                  src={data.profilePicture}
+                  alt="avatar"
+                />
+                <p>{data.firstName} is on Lolly</p>
+                <a href="https://apps.apple.com/us/app/lolly/id1525109653">
+                  <img className="storeimg" src={Appstore} alt="appstore" />
+                </a>
               </div>
             </div>
 
-            <div className="user">
-              <img className="avatar" src={data.profilePicture} alt="avatar" />
-              <p>{data.firstName} is on Lolly</p>
-              <a href="https://apps.apple.com/us/app/lolly/id1525109653">
-                <img className="storeimg" src={Appstore} alt="appstore" />
-              </a>
-            </div>
-          </div>
-
-          <div className="mobile">
-            <div className="userinfo">
-              <img className="avatar" src={data.profilePicture} alt="avatar" />
-              <span className="username">{data.firstName} is on Lolly</span>
-              <a href="https://apps.apple.com/us/app/lolly/id1525109653">
-                Open app
-              </a>
-            </div>
-            <div className="video">
-              <video
-                id="vid"
-                width={data.videoWidth}
-                height="240"
-                autoPlay="autoPlay"
-                muted="muted"
-                loop="loop"
-                key={videoURL}
-                ref={videoRef2}
-                onClick={handleVideoClick}
-              >
-                <source src={videoURL} type="video/mp4" />
-              </video>
-              {playFlag2 && (
-                <div className="play" onClick={(e) => videoAct(e)}>
-                  <img src={Play} alt="play" width="50" />
-                </div>
-              )}
-              <div className="video-footer">
-                <div className="video-footer-left">
-                  <img src={data.profilePicture} alt="avatar" />
-                  <div className="userinfo">
-                    <h4>
-                      {data.firstName} | {age}{" "}
-                      {`${data.location !== "" ? `| ${data.location}` : ""}`}
-                    </h4>
-                    {data.caption !== "" ? <p>{data.caption}</p> : ""}
-                  </div>
-                </div>
-                <div className="video-footer-right">
-                  <img className="heart" src={Heart} alt="heart" />
-                </div>
+            <div className="mobile">
+              <div className="userinfo">
+                <img
+                  className="avatar"
+                  src={data.profilePicture}
+                  alt="avatar"
+                />
+                <span className="username">{data.firstName} is on Lolly</span>
+                <a href="https://apps.apple.com/us/app/lolly/id1525109653">
+                  Open app
+                </a>
               </div>
-            </div>
-          </div>
-        </>
-      )}
-      {flag === 2 && (
-        <div>
-          <div className="pt-5">
-            <div className="flex-grow">
-              <div className="mx-auto text-white">
-                <div className="align-items-center d-flex flex-row">
-                  <div className="col-lg-6 error-page-divider text-lg-left pl-lg-4">
-                    <h2>SORRY!</h2>
-                    <h3 className="font-weight-dark" style={{ color: "black" }}>
-                      The page you’re looking for was not found.
-                    </h3>
+              <div className="video">
+                <video
+                  id="vid"
+                  width={data.videoWidth}
+                  height="240"
+                  autoPlay="autoPlay"
+                  muted="muted"
+                  loop="loop"
+                  key={videoURL}
+                  ref={videoRef2}
+                  onClick={handleVideoClick}
+                >
+                  <source src={videoURL} type="video/mp4" />
+                </video>
+                {playFlag2 && (
+                  <div className="play" onClick={(e) => videoAct(e)}>
+                    <img src={Play} alt="play" width="50" />
+                  </div>
+                )}
+                <div className="video-footer">
+                  <div className="video-footer-left">
+                    <img src={data.profilePicture} alt="avatar" />
+                    <div className="userinfo">
+                      <h4>
+                        {data.firstName} | {age}{" "}
+                        {`${data.location !== "" ? `| ${data.location}` : ""}`}
+                      </h4>
+                      {data.caption !== "" ? <p>{data.caption}</p> : ""}
+                    </div>
+                  </div>
+                  <div className="video-footer-right">
+                    <img className="heart" src={Heart} alt="heart" />
                   </div>
                 </div>
               </div>
             </div>
+          </>
+        )}
+        {flag === 2 && (
+          <div>
+            <div className="pt-5">
+              <div className="flex-grow">
+                <div className="mx-auto text-white">
+                  <div className="align-items-center d-flex flex-row">
+                    <div className="col-lg-6 error-page-divider text-lg-left pl-lg-4">
+                      <h2>SORRY!</h2>
+                      <h3
+                        className="font-weight-dark"
+                        style={{ color: "black" }}
+                      >
+                        The page you’re looking for was not found.
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+    </>
   );
 }
 
