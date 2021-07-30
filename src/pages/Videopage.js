@@ -84,8 +84,17 @@ function Videopage() {
     document.body.style.backgroundImage = `url(${backgrounImage})`;
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
-    document.body.style.backgroundAttachment = "fixed";
+    document.body.style.backgroundAttachment = "fixed";    
+
   }, [backgrounImage]);
+
+  useEffect(() => {
+    if(flag === 1) {
+      setTimeout(() => {
+        document.getElementById('vid').play();
+      }, 500);      
+    }    
+  }, [flag]);
 
   const videoAct = (event) => {
     //desktop
@@ -135,6 +144,7 @@ function Videopage() {
                 width={data.videoWidth}
                 height="240"
                 autoPlay="autoPlay"
+                muted="muted"
                 loop="loop"
                 key={videoURL}
                 ref={videoRef}
@@ -187,6 +197,7 @@ function Videopage() {
                 width={data.videoWidth}
                 height="240"
                 autoPlay="autoPlay"
+                muted="muted"
                 loop="loop"
                 key={videoURL}
                 ref={videoRef2}
