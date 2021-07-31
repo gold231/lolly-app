@@ -82,7 +82,8 @@ function Videopage() {
   useEffect(() => {
     if (flag === 1) {
       setTimeout(() => {
-        document.getElementById("vid").play();
+        videoRef.current.play();
+        videoRef2.current.play();
       }, 500);
     }
   }, [flag]);
@@ -133,7 +134,7 @@ function Videopage() {
             <div className="content">
               <div className="video">
                 <video
-                  id="vid"
+                  id="vid"                  
                   width={data.videoWidth}
                   height="240"
                   autoPlay="autoPlay"
