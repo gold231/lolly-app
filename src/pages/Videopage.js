@@ -79,14 +79,14 @@ function Videopage() {
       });
   }, [id]);
 
-  useEffect(() => {
-    if (flag === 1) {
-      setTimeout(() => {
-        videoRef.current.play();
-        videoRef2.current.play();
-      }, 500);
-    }
-  }, [flag]);
+  // useEffect(() => {
+  //   if (flag === 1) {
+  //     setTimeout(() => {
+  //       videoRef.current.play();
+  //       videoRef2.current.play();
+  //     }, 500);
+  //   }
+  // }, [flag]);
 
   const videoAct = (event) => {
     //desktop
